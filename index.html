@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DARK SITE MINIONS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="rain"></canvas>
+
+<header>
+    <div class="header-decoration">✦ ───────── ✦</div>
+    <h1>DARK SITE MINIONS</h1>
+    <p>ДОБРО ПОЖАЛОВАТЬ В САМЫЙ СТРАННЫЙ УГОЛОК ИНТЕРНЕТА</p>
+    <div class="header-decoration">✦ ───────── ✦</div>
+</header>
+
+<nav>
+    <a href="#start">✦ НАЧАЛО ✦</a>
+    <a href="#quiz">☠ КАКОЙ ТЫ МИНЬОН? ☠</a>
+    <a href="#chaos">✦ МИНЬОНСКИЙ ХАОС ✦</a>
+    <a href="#end">✦ КОНЕЦ ✦</a>
+</nav>
+
+
+<!-- =========================
+     1. НАЧАЛО
+========================= -->
+
+<section class="site-section intro-section" id="start">
+
+    <div class="section-frame">
+
+        <div class="section-title">
+            <span>╔══════════╗</span>
+            <h2>ДОБРО ПОЖАЛОВАТЬ В МИНЬОНСКИЙ ХАОС</h2>
+            <span>╚══════════╝</span>
+        </div>
+
+        <div class="intro-text">
+            <p>
+                МИНЬОНЫ МАЛЕНЬКИЕ. МИНЬОНЫ ЖЁЛТЫЕ. МИНЬОНЫ ПОНЯТИЯ НЕ ИМЕЮТ,
+                ЧТО ОНИ ДЕЛАЮТ. И КАК-ТО У НИХ ВСЁ РАВНО ПОЛУЧАЕТСЯ УСТРОИТЬ ХАОС.
+            </p>
+
+            <p>
+                ОНИ ЛЮБЯТ БАНАНЫ, КРИЧАТ НЕПОНЯТНЫЕ СЛОВА, ЛОМАЮТ ВСЁ ВОКРУГ,
+                А ПОТОМ СМОТРЯТ НА ТЕБЯ ТАК, БУДТО ЭТО ТЫ ВО ВСЁМ ВИНОВАТ.
+            </p>
+
+            <p>
+                ЕСЛИ ТЫ ЗАШЁЛ СЮДА СЛУЧАЙНО — УЖЕ ПОЗДНО. ТЕПЕРЬ ТЫ ЧАСТЬ ЭТОГО ХАОСА.
+            </p>
+        </div>
+
+        <hr>
+
+        <div class="top-gallery">
+
+            <div class="gallery-column">
+                <img src="images/minion1.jpg" alt="Миньон 1">
+                <div class="small-gallery">
+                    <img src="images/minion2.gif" alt="Миньон 2">
+                    <img src="images/minion3.jpg" alt="Миньон 3">
+                </div>
+            </div>
+
+            <div class="gallery-column">
+                <img src="images/minion4.jpg" alt="Миньон 4">
+                <div class="small-gallery">
+                    <img src="images/minion5.gif" alt="Миньон 5">
+                    <img src="images/minion6.jpg" alt="Миньон 6">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     2. ВИКТОРИНА
+========================= -->
+
+<section class="site-section quiz-section" id="quiz">
+
+    <div class="banana-dance-bg">
+        <div class="banana-background-symbols" aria-hidden="true">🍌 🍌 🍌 🍌 🍌</div>
+        <div class="banana-overlay"></div>
+    </div>
+
+    <div class="side-tall-image left-tall">
+        <img src="images/minion15.jpg" alt="Миньон слева">
+    </div>
+
+    <div class="side-tall-image right-tall">
+        <img src="images/minion10.jpg" alt="Миньон справа">
+    </div>
+
+    <div class="quiz-card">
+
+        <div id="quiz-start-screen">
+
+            <div class="quiz-title-decoration">☠ • • • ☠</div>
+
+            <h2>КАКОЙ ТЫ МИНЬОН?</h2>
+
+            <p class="quiz-subtitle">
+                10 ВОПРОСОВ. ОДНА СУДЬБА. НОЛЬ МОЗГОВ.
+            </p>
+
+            <img
+                class="quiz-main-image"
+                src="images/minion8.gif"
+                alt="Миньон для викторины"
+            >
+
+            <button class="main-button" id="startQuiz">
+                НАЧАТЬ ХАОС
+            </button>
+
+        </div>
+
+
+        <div id="quiz-game" class="hidden">
+
+            <div class="quiz-progress">
+                <span id="questionNumber">ВОПРОС 1 / 10</span>
+                <div class="progress-bar">
+                    <div id="progressFill"></div>
+                </div>
+            </div>
+
+            <h2 id="questionText"></h2>
+
+            <div id="answers"></div>
+
+        </div>
+
+
+        <div id="quiz-result" class="hidden">
+
+            <div class="quiz-title-decoration">✦ РЕЗУЛЬТАТ ✦</div>
+
+            <h2 id="resultTitle"></h2>
+
+            <img id="resultImage" src="" alt="Твой миньон">
+
+            <p id="resultDescription"></p>
+
+            <button class="main-button" id="restartQuiz">
+                ПРОЙТИ ЕЩЁ РАЗ
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     3. МИНЬОНСКИЙ ХАОС
+========================= -->
+
+<section class="site-section chaos-section" id="chaos">
+
+    <div id="bananaRain" class="banana-rain" aria-hidden="true"></div>
+
+    <div class="section-frame">
+
+        <div class="section-title">
+            <span>☠</span>
+            <h2>ЛАБОРАТОРИЯ МИНЬОНСКОГО ХАОСА</h2>
+            <span>☠</span>
+        </div>
+
+        <p class="chaos-intro">
+            МЫ ДАЛИ МИНЬОНАМ КНОПКИ. ЭТО БЫЛА ОЧЕНЬ ПЛОХАЯ ИДЕЯ.
+        </p>
+
+        <div class="chaos-grid">
+
+            <div class="chaos-box">
+                <h3>БАНАНОВАЯ КНОПКА</h3>
+                <p>Нажми. Просто нажми. Что может пойти не так?</p>
+                <button class="chaos-button" id="bananaButton">
+                    🍌 ВЫПУСТИТЬ БАНАН
+                </button>
+                <div id="bananaCounter">ВЫПУЩЕНО БАНАНОВ: 0</div>
+            </div>
+
+            <div class="chaos-box">
+                <h3>НАСТРОЕНИЕ МИНЬОНА</h3>
+                <p>Узнай, какой сегодня уровень миньонского безумия.</p>
+                <button class="chaos-button" id="moodButton">
+                    УЗНАТЬ НАСТРОЕНИЕ
+                </button>
+                <div id="moodResult">???</div>
+            </div>
+
+            <div class="chaos-box">
+                <h3>ВЫЗВАТЬ МИНЬОНА</h3>
+                <p>Нажми несколько раз. Он не любит, когда его будят.</p>
+                <button class="chaos-button" id="summonButton">
+                    ВЫЗВАТЬ
+                </button>
+                <div id="summonArea"></div>
+            </div>
+
+        </div>
+
+        <div class="minion-gallery">
+            <img src="images/minion9.jpg" alt="Миньон 9">
+            <img src="images/minion11.gif" alt="Миньон 11">
+            <img src="images/minion12.jpg" alt="Миньон 12">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     4. КОНЕЦ
+========================= -->
+
+<section class="site-section end-section" id="end">
+
+    <div class="end-decoration left-decoration">🍌<br>✦<br>🍌</div>
+    <div class="end-decoration right-decoration">🍌<br>✦<br>🍌</div>
+
+    <div class="end-frame">
+
+        <div class="end-title">
+            <span>──────</span>
+            <h2>END...</h2>
+            <span>──────</span>
+        </div>
+
+        <p class="click-text">
+            нажми на миньёна
+        </p>
+
+        <div class="arrow">
+            ↓
+        </div>
+
+        <button class="minion-trigger" id="minionTrigger" aria-label="Нажми на миньона">
+            <img src="images/minion6.jpg" alt="Нажми на миньона">
+        </button>
+
+        <p class="end-warning">
+            ...НО ЭТО ЕЩЁ НЕ СОВСЕМ КОНЕЦ.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ОКНО С ЦВЕТОЧКОМ
+========================= -->
+
+<div id="flowerPopup" class="popup hidden">
+
+    <div class="flower-scene">
+
+        <button class="close-popup" id="closePopup" aria-label="Закрыть">×</button>
+
+        <video id="flowerVideo" playsinline>
+            <source src="media/minion-flower.mp4" type="video/mp4">
+        </video>
+
+        <div class="flower-fallback">
+            🌼
+            <br>
+            <span>МИНЬОН ПРИНЁС ТЕБЕ ЦВЕТОЧЕК</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- СКРИМЕР -->
+
+<div id="screamer" class="screamer hidden">
+
+    <img src="images/minion-screamer.jpg" alt="Сюрприз">
+
+    <audio id="screamerSound" preload="auto">
+        <source src="media/screamer.mp3" type="audio/mpeg">
+    </audio>
+
+</div>
+
+
+<!-- ОСНОВНАЯ МУЗЫКА -->
+
+<audio id="backgroundMusic" loop>
+    <source src="media/background-music.mp3" type="audio/mpeg">
+</audio>
+
+
+<footer>
+    DARK SITE MINIONS © 2026
+    <br><br>
+    СДЕЛАНО С ЛЮБОВЬЮ, БАНАНАМИ И СОМНИТЕЛЬНЫМИ РЕШЕНИЯМИ
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
